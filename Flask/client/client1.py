@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
-SERVER_URL = 'http://127.0.0.1:8080'  # Server endpoint
+SERVER_URL = 'http://127.0.0.1:30001'  # Server endpoint
 
 def preprocess_data(filepath):
     """

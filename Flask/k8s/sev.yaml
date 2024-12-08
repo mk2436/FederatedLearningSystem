@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fl-sev-v1
+  labels:
+    app: flsys
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flsys
+  template:
+    metadata:
+      labels:
+        app: flsys
+        version: v1
+    spec:
+      containers:
+      - name: fl-sev
+        image: mihirkadam1912/flsev:v1
+        ports:
+          - containerPort: 5000
