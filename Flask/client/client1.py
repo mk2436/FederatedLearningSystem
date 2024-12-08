@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
-SERVER_URL = 'http://127.0.0.1:5000'  # Server endpoint
+SERVER_URL = 'http://127.0.0.1:8080'  # Server endpoint
 
 def preprocess_data(filepath):
     """
@@ -62,7 +62,7 @@ def send_local_updates(weights, bias):
 
 if __name__ == '__main__':
     # Preprocess the data
-    filepath = './Flask/seattle-weather.csv'  # Ensure this file path is correct
+    filepath = './Flask/client/seattle-weather.csv'  # Ensure this file path is correct
     X, y = preprocess_data(filepath)
 
     # Fetch global model (optional, for logging)
