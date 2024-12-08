@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "2321f704-9b2b-432e-a089-dbcab18e1ab0",
+		"name": "Federated Learning System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28670784"
+	},
+	"item": [
+		{
+			"name": "get weights",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/get_model",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get_model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send weights",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"weights\": 1,\r\n    \"bias\": 2\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/submit_updates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"submit_updates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aggregate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:30001/aggregate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30001",
+					"path": [
+						"aggregate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
