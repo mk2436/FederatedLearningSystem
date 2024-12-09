@@ -12,12 +12,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/get_model",
+					"raw": "http://localhost:30001/get_model",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "30001",
 					"path": [
 						"get_model"
 					]
