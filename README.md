@@ -51,10 +51,10 @@ Since our objective was to build a higly scalable Federated Learning System, we 
   - RUN "python server/server.py"
 - Step 2:
   - Connect the server on localhost:
-    - http://localhost:30001/get_model
-    - http://localhost:30001/submit_updates
-    - http://localhost:30001/aggregate
+    - http://localhost:5000/get_model
+    - http://localhost:5000/submit_updates
+    - http://localhost:5000/aggregate
   - Connect the server with IP Address/DNS:
-    - http://<your-dns>:30001/get_model
-    - http://<your-dns>:30001/submit_updates
-    - http://<your-dns>:30001/aggregate
+    - http://<your-dns>:5000/get_model
+    - http://<your-dns>:5000/submit_updates
+    - http://<your-dns>:5000/aggregate
