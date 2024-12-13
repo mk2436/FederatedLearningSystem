@@ -3,20 +3,19 @@ IHLP Term Project <br/>
 
 **File Structure**:<br/><br/>
 FederatedLearningSys<br/>
-|-- client<br/>
-&nbsp;&nbsp;&nbsp;|-- client1.py<br/>
-&nbsp;&nbsp;&nbsp;|-- client2.py<br/>
-&nbsp;&nbsp;&nbsp;|-- client3.py<br/>
-&nbsp;&nbsp;&nbsp;|-- houston-weather.csv<br/>
-&nbsp;&nbsp;&nbsp;|-- michigan-weather.csv<br/>
-&nbsp;&nbsp;&nbsp;|-- seattle-weather.csv<br/>
-|-- k8s<br/>
-&nbsp;&nbsp;&nbsp;|-- nodePort.yaml<br/>
-&nbsp;&nbsp;&nbsp;|-- sev.yaml<br/>
-|-- server<br/>
-&nbsp;&nbsp;&nbsp;|-- Dockerfile<br/>
-&nbsp;&nbsp;&nbsp;|-- requirements.txt<br/>
-&nbsp;&nbsp;&nbsp;|-- server.py<br/>
-|-- flvenv<br/>
+|-- client/<br/>
+|   |-- client1.py<br/>
+|   |-- client2.py<br/>
+|   |-- client3.py<br/>
+|   |-- houston-weather.csv<br/>
+|   |-- michigan-weather.csv<br/>
+|   |-- seattle-weather.csv<br/>
+|-- k8s/<br/>
+|   |-- nodePort.yaml<br/>
+|   |-- sev.yaml<br/>
+|-- server/<br/>
+|   |-- Dockerfile<br/>
+|   |-- requirements.txt<br/>
+|   |-- server.py<br/>
 |-- .gitignore<br/>
 |-- README.md
