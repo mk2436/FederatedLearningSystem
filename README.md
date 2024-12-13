@@ -2,7 +2,7 @@ IHLP Term Project <br/>
 **Topic: Federated Learning System for Distributed AI/ML model training** <br/><br/>
 
 **File Structure**:<br/><br/>
-FederatedLearningSys<br/>
+FederatedLearningSys/<br/>
 |-- client/<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- client1.py<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- client2.py<br/>
@@ -18,4 +18,23 @@ FederatedLearningSys<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- requirements.txt<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- server.py<br/>
 |-- .gitignore<br/>
-|-- README.md
+|-- README.md<br/>
+
+<br/>
+Since our objective was to build a higly scalable Federated Learning System, we have taken the Dockerization approach. By creating a Docker container of our server, we can implmenet the server-side code on Kubernetes Engine, and configure the Kubernetes Engine to manage the scaling of the server in response to increasing or decreasing requests from the client.
+<br/>
+
+**Steps to run the server**: <br/>
+- Make sure your system/server has following softwares installed:
+  - Docker
+  - Kubernetes
+  - kubectl (command line tool for managing Kubernetes)<br/>
+- Step 1:
+  - RUN "kubectl apply -f k8s/sev.yaml"
+  - RUN "kubectl apply -f k8s/nodePort.yaml"
+- Step 2:
+  - Connect the server using following urls:
+    - http://localhost:30001/get_model
+    - http://localhost:30001/submit_updates
+    - http://localhost:30001/aggregate
+
