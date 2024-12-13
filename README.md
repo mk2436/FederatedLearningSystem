@@ -46,7 +46,7 @@ Since our objective was to build a higly scalable Federated Learning System, we 
     - http://<your-DNS/IP>:30001/aggregate
 <br/><br/>
 
-**2) Steps to run the server on your local system**: <br/>
+**2) Steps to run the Server on your local system**: <br/>
 - Make sure your system/server has following softwares installed:
   - Python<br/>
 - Step 1:
@@ -57,13 +57,10 @@ Since our objective was to build a higly scalable Federated Learning System, we 
     - http://localhost:5000/get_model
     - http://localhost:5000/submit_updates
     - http://localhost:5000/aggregate
-  - Connect the server with IP Address/DNS:
-    - http://<your-DNS/IP>:5000/get_model
-    - http://<your-DNS/IP>:5000/submit_updates
-    - http://<your-DNS/IP>:5000/aggregate
+
 <br/><br/>
 
-**Steps to run the server on your local system**: <br/>
+**Steps to run the Client on your local system**: <br/>
 - Make sure your system/server has following softwares installed:
   - Python<br/>
 - Step 1:
