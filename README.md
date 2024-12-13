@@ -41,9 +41,9 @@ Since our objective was to build a higly scalable Federated Learning System, we 
     - http://localhost:30001/submit_updates
     - http://localhost:30001/aggregate
   - Connect the server with IP Address/DNS:
-    - http://"your-dns":30001/get_model
-    - http://"your-dns":30001/submit_updates
-    - http://"your-dns":30001/aggregate
+    - http://<your-DNS/IP>:30001/get_model
+    - http://<your-DNS/IP>:30001/submit_updates
+    - http://<your-DNS/IP>:30001/aggregate
 <br/><br/>
 
 **2) Steps to run the server on your local system**: <br/>
@@ -58,9 +58,9 @@ Since our objective was to build a higly scalable Federated Learning System, we 
     - http://localhost:5000/submit_updates
     - http://localhost:5000/aggregate
   - Connect the server with IP Address/DNS:
-    - http://"your-dns":5000/get_model
-    - http://"your-dns":5000/submit_updates
-    - http://"your-dns":5000/aggregate
+    - http://<your-DNS/IP>:5000/get_model
+    - http://<your-DNS/IP>:5000/submit_updates
+    - http://<your-DNS/IP>:5000/aggregate
 <br/><br/>
 
 **Steps to run the server on your local system**: <br/>
@@ -83,5 +83,5 @@ Since our objective was to build a higly scalable Federated Learning System, we 
 - Make sure your server code is running
 - Make sure at least one client code is executed
 - Inovke the REST API to aggreate server using following links
-  - http://"your-dns":30001/aggregate [from **1)**]
-  - http://"your-dns":5000/aggregate [from **2)**]
+  - http://<your-DNS/IP>:30001/aggregate [from **1)**]
+  - http://<your-DNS/IP>:5000/aggregate [from **2)**]
