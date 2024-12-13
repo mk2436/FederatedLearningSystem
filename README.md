@@ -24,7 +24,7 @@ FederatedLearningSys/<br/>
 Since our objective was to build a higly scalable Federated Learning System, we have taken the Dockerization approach. By creating a Docker container of our server, we can implmenet the server-side code on Kubernetes Engine, and configure the Kubernetes Engine to manage the scaling of the server in response to increasing or decreasing requests from the client.
 <br/><br/>
 
-**Steps to run the server using Kubernetes**: <br/>
+**1) Steps to run the server using Kubernetes**: <br/>
 - Make sure your system/server has following softwares installed:
   - Docker
   - Kubernetes
@@ -43,7 +43,7 @@ Since our objective was to build a higly scalable Federated Learning System, we 
     - http://<your-dns>:30001/aggregate
 <br/><br/>
 
-**Steps to run the server on your local system**: <br/>
+**2) Steps to run the server on your local system**: <br/>
 - Make sure your system/server has following softwares installed:
   - Python<br/>
 - Step 1:
@@ -58,3 +58,27 @@ Since our objective was to build a higly scalable Federated Learning System, we 
     - http://<your-dns>:5000/get_model
     - http://<your-dns>:5000/submit_updates
     - http://<your-dns>:5000/aggregate
+<br/><br/>
+
+**Steps to run the server on your local system**: <br/>
+- Make sure your system/server has following softwares installed:
+  - Python<br/>
+- Step 1:
+  - RUN "pip install -r client/requirements.txt"
+  - RUN "python client/client1.py", this will train a model and send the weights to the server
+- Step 2:
+  - Connect to server running on K8s ( from 1) )
+    - Edit SERVER_URL (line 6) on all three client codes to following:
+      - Kubernetes on localhost: "http://127.0.0.1:30001"
+      - Kubernetes on a server:  "http://<your-IP/DNS>:30001"
+  - Connect to server running on localhost ( from 2) )
+    - Edit SERVER_URL (line 6) on all three client codes to following:
+      - Kubernetes on localhost: "http://127.0.0.1:5000"
+<br/><br/>
+
+**Steps to aggregate weigths**: <br/>
+- Make sure your server code is running
+- Make sure at least one client code is executed
+- Inovke the REST API to aggreate server using following links
+  - http://<your-dns>:30001/aggregate (from 1) )
+  - http://<your-dns>:5000/aggregate (from 2) )
