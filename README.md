@@ -13,6 +13,7 @@ FederatedLearningSys/<br/>
 |-- k8s/<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- nodePort.yaml<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- sev.yaml<br/>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- hpa.yaml<br/>
 |-- server/<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- Dockerfile<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- requirements.txt<br/>
