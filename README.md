@@ -4,6 +4,6 @@ IHLP Term Project <br/>
 **File Structure**:
 Flask<br/>
 |-- client<br/>
-   |-- client1.py<br/>
-   |-- client2.py<br/>
-   |-- client3.py<br/>
+&nbsp;&nbsp;&nbsp;|-- client1.py<br/>
+&nbsp;&nbsp;&nbsp;|-- client2.py<br/>
+&nbsp;&nbsp;&nbsp;|-- client3.py<br/>
