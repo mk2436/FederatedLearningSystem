@@ -32,6 +32,8 @@ Since our objective was to build a higly scalable Federated Learning System, we 
 - Step 1:
   - RUN "kubectl apply -f k8s/sev.yaml"
   - RUN "kubectl apply -f k8s/nodePort.yaml"
+  - RUN "kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml"
+  - RUN "kubectl apply -f k8s/hpa.yaml"
 - Step 2:
   - Connect the server on localhost:
     - http://localhost:30001/get_model
