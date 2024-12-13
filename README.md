@@ -45,8 +45,7 @@ Since our objective was to build a higly scalable Federated Learning System, we 
 
 **Steps to run the server on your local system**: <br/>
 - Make sure your system/server has following softwares installed:
-  - Python
-<br/>
+  - Python<br/>
 - Step 1:
   - RUN "pip install -r server/requirements.txt"
   - RUN "python server/server.py"
