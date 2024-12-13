@@ -4,6 +4,7 @@ IHLP Term Project <br/>
 **File Structure**:<br/><br/>
 FederatedLearningSys/<br/>
 |-- client/<br/>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- requirements.txt<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- client1.py<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- client2.py<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- client3.py<br/>
