@@ -1,7 +1,7 @@
 IHLP Term Project <br/>
 **Topic: Federated Learning System for Distributed AI/ML model training** <br/><br/>
 
-**File Structure**:<br/>
+**File Structure**:<br/><br/>
 Flask<br/>
 |-- client<br/>
 &nbsp;&nbsp;&nbsp;|-- client1.py<br/>
