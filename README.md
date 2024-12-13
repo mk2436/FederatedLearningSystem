@@ -2,7 +2,6 @@ IHLP Term Project <br/>
 **Topic: Federated Learning System for Distributed AI/ML model training** <br/><br/>
 
 **File Structure**:<br/><br/>
-FederatedLearningSys/<br/>
 |-- client/<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- requirements.txt<br/>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- client1.py<br/>

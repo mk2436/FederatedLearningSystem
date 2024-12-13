@@ -1,7 +1,7 @@
 import requests
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import LinearRegression
 
 SERVER_URL = 'http://127.0.0.1:30001'  # Server endpoint
 
@@ -15,7 +15,7 @@ def preprocess_data(filepath):
     # Drop rows with missing or invalid values
     data = data.dropna()
 
-    # Select relevant features and target
+    # Example preprocessing: select relevant features and target
     X = data[['temp_max', 'temp_min']].values  # Features (2 features)
     y = data['precipitation'].values          # Target
 
@@ -23,15 +23,14 @@ def preprocess_data(filepath):
 
 def train_local_model(X, y):
     """
-    Train a local Random Forest regression model.
+    Train a local linear regression model using scikit-learn.
     """
-    model = RandomForestRegressor(n_estimators=10, random_state=42)  # Initialize Random Forest
+    model = LinearRegression()  # Initialize Linear Regression model
     model.fit(X, y)  # Train model
 
-    # For Random Forest, there are no explicit "weights" like in linear regression.
-    # Instead, we can approximate feature importance as "weights" and set bias to 0.
-    weights = model.feature_importances_  # Feature importance
-    bias = 0  # Bias doesn't exist explicitly in Random Forest
+    # Extract weights and bias
+    weights = model.coef_  # Coefficients (weights)
+    bias = model.intercept_  # Intercept (bias)
 
     return weights, bias
 
@@ -63,14 +62,14 @@ def send_local_updates(weights, bias):
 
 if __name__ == '__main__':
     # Preprocess the data
-    filepath = './FederatedLearningSys/client/michigan-weather.csv'  # Ensure this file path is correct
+    filepath = './client/seattle-weather.csv'  # Ensure this file path is correct
     X, y = preprocess_data(filepath)
 
     # Fetch global model (optional, for logging)
     global_weights, global_bias = fetch_global_model()
     print(f"Fetched global model: weights={global_weights}, bias={global_bias}")
 
-    # Train locally using Random Forest
+    # Train locally using scikit-learn
     local_weights, local_bias = train_local_model(X, y)
     print(f"Trained locally: weights={local_weights}, bias={local_bias}")
 
