@@ -63,7 +63,7 @@ def send_local_updates(weights, bias):
 
 if __name__ == '__main__':
     # Preprocess the data
-    filepath = './Flask/client/michigan-weather.csv'  # Ensure this file path is correct
+    filepath = './FederatedLearningSys/client/michigan-weather.csv'  # Ensure this file path is correct
     X, y = preprocess_data(filepath)
 
     # Fetch global model (optional, for logging)
